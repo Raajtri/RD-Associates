@@ -1,0 +1,320 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* TaxCurv Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 220 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+
+    /* Teal Primary - TaxCurv signature */
+    --primary: 205 70% 28%;
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 205 80% 20%;
+    --primary-light: 205 65% 38%;
+
+    /* Orange Accent */
+    --accent: 205 60% 38%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 205 55% 45%;
+
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 220 20% 15%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 205 70% 35%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(205 70% 28%) 0%, hsl(205 80% 20%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(205 60% 38%) 0%, hsl(205 65% 30%) 100%);
+    --gradient-dark: linear-gradient(135deg, hsl(220 20% 15%) 0%, hsl(220 25% 20%) 100%);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 205 70% 28%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 205 40% 92%
+    --sidebar-accent-foreground: 205 70% 28%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 205 70% 35%;
+
+    /* Typography */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 10px 40px rgba(0, 0, 0, 0.12);
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 20% 13%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 20% 13%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 205 65% 45%;
+    --primary-foreground: 220 20% 10%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 205 60% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 205 65% 45%;
+
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 240 5% 96%;
+    --sidebar-primary: 205 65% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 205 50% 20%;
+    --sidebar-accent-foreground: 205 65% 70%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 205 65% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Hero Section Styles */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .accent-gradient {
+    background: var(--gradient-accent);
+  }
+
+  .dark-gradient {
+    background: var(--gradient-dark);
+  }
+
+  /* Service Card Hover Effect */
+  .service-card {
+    @apply bg-card rounded-xl p-6 transition-all duration-300 ease-out;
+    box-shadow: var(--shadow-card);
+  }
+
+  .service-card:hover {
+    box-shadow: var(--shadow-hover);
+    @apply -translate-y-1;
+  }
+
+  /* Stats Counter Animation */
+  .stats-item {
+    @apply text-center p-6;
+  }
+
+  .stats-number {
+    @apply text-4xl md:text-5xl font-bold;
+    font-family: var(--font-heading);
+  }
+
+  /* Section Title */
+  .section-badge {
+    @apply inline-block px-4 py-1.5 rounded-full text-sm font-medium mb-4;
+    background: hsl(var(--primary) / 0.1);
+    color: hsl(var(--primary));
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-6;
+    font-family: var(--font-heading);
+  }
+
+  /* Process Step */
+  .process-step {
+    @apply relative;
+  }
+
+  .process-number {
+    @apply absolute -top-3 -left-3 w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold;
+    background: var(--gradient-accent);
+    color: white;
+  }
+
+  /* Testimonial Card */
+  .testimonial-card {
+    @apply bg-card rounded-2xl p-8 relative;
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Feature Icon */
+  .feature-icon {
+    @apply w-16 h-16 rounded-xl flex items-center justify-center mb-4;
+    background: hsl(var(--primary) / 0.1);
+    color: hsl(var(--primary));
+  }
+
+  /* Button Variants */
+  .btn-hero {
+    @apply px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300;
+    background: hsl(var(--accent));
+    color: white;
+  }
+
+  .btn-hero:hover {
+    background: hsl(var(--accent-light));
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px hsl(var(--accent) / 0.3);
+  }
+
+  .btn-outline-hero {
+    @apply px-8 py-4 rounded-lg font-semibold text-lg border-2 transition-all duration-300;
+    border-color: white;
+    color: white;
+  }
+
+  .btn-outline-hero:hover {
+    background: white;
+    color: hsl(var(--primary));
+  }
+
+  /* Header Styles */
+  .nav-link {
+    @apply relative font-medium transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300;
+    background: hsl(var(--primary));
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  /* WhatsApp Floating Button */
+  .whatsapp-btn {
+    @apply fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform duration-300;
+    background: #25D366;
+  }
+
+  .whatsapp-btn:hover {
+    transform: scale(1.1);
+  }
+
+  /* Page Banner */
+  .page-banner {
+    @apply relative py-20 md:py-28;
+    background: var(--gradient-hero);
+  }
+
+  .page-banner::before {
+    content: '';
+    @apply absolute inset-0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  /* Animate on scroll */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.6s ease forwards;
+  }
+
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Pulse animation for stats */
+  .pulse-icon {
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #25D366;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
