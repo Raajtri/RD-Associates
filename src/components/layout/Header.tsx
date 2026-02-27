@@ -129,26 +129,74 @@ const Header = () => {
               </NavigationMenuItem>
 
                   {/* TAX & COMPLIANCE */}
+                  {/* TAX & COMPLIANCE */}
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="font-medium">
+                Tax & Compliance
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <div className="w-[900px] p-6 grid grid-cols-4 gap-6 text-sm">
+
+                  {/* GST */}
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-primary">GST & Indirect Tax</h4>
+                    <Link to="/tax-compliance/gst-registration" className="block hover:text-primary">GST Registration</Link>
+                    <Link to="/tax-compliance/gst-filing" className="block hover:text-primary">GST Filing</Link>
+                    <Link to="/tax-compliance/gst-cancellation" className="block hover:text-primary">GST Cancellation</Link>
+                    <Link to="/tax-compliance/hsn-code-finder" className="block hover:text-primary">HSN Code Finder</Link>
+                    <Link to="/tax-compliance/indirect-tax" className="block hover:text-primary">Indirect Tax</Link>
+                  </div>
+
+                  {/* ACCOUNTING */}
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-primary">Accounting & Tax</h4>
+                    <Link to="/tax-compliance/accounting-book-keeping" className="block hover:text-primary">Book Keeping</Link>
+                    <Link to="/tax-compliance/tds-return-filing" className="block hover:text-primary">TDS Return Filing</Link>
+                    <Link to="/tax-compliance/income-tax-assessment" className="block hover:text-primary">Income Tax Assessment</Link>
+                    <Link to="/tax-compliance/virtual-cfo" className="block hover:text-primary">Virtual CFO</Link>
+                    <Link to="/tax-compliance/corporate-tax" className="block hover:text-primary">Corporate Tax</Link>
+                  </div>
+
+                  {/* ANNUAL FILINGS */}
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-primary">Annual Compliance</h4>
+                    <Link to="/tax-compliance/annual-compliance" className="block hover:text-primary">Annual Compliance</Link>
+                    <Link to="/tax-compliance/llp-annual-filing" className="block hover:text-primary">LLP Annual Filing</Link>
+                    <Link to="/tax-compliance/secretarial-audit" className="block hover:text-primary">Secretarial Audit</Link>
+                  </div>
+
+                  {/* LABOUR */}
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-primary">Labour Compliance</h4>
+                    <Link to="/tax-compliance/pf-registration" className="block hover:text-primary">PF Registration</Link>
+                    <Link to="/tax-compliance/esic-registration" className="block hover:text-primary">ESIC Registration</Link>
+                    <Link to="/tax-compliance/professional-tax" className="block hover:text-primary">Professional Tax</Link>
+                    <Link to="/tax-compliance/shops-license" className="block hover:text-primary">Shops License</Link>
+                  </div>
+
+                </div>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
+            {/* TRADEMARK */}
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="font-medium">
+                Trademark & IP
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <div className="w-[400px] p-6 text-sm space-y-2">
+                  <Link to="/trademark/trademark-registration" className="block hover:text-primary">Trademark Registration</Link>
+                  <Link to="/trademark/trademark-objection" className="block hover:text-primary">Trademark Objection</Link>
+                  <Link to="/trademark/trademark-renewal" className="block hover:text-primary">Trademark Renewal</Link>
+                </div>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
+                  {/* Payroll */}
                   <NavigationMenuItem>
                     <NavigationMenuTrigger className="font-medium">
-                      Tax & Compliance
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <div className="w-[600px] p-6 grid grid-cols-2 gap-6 text-sm">
-                        <Link to="/tax/gst-registration" className="hover:text-primary">GST Registration</Link>
-                        <Link to="/tax/gst-filing" className="hover:text-primary">GST Filing</Link>
-                        <Link to="/tax/income-tax-filing" className="hover:text-primary">Income Tax Filing</Link>
-                        <Link to="/tax/tax-audit" className="hover:text-primary">Tax Audit</Link>
-                        <Link to="/tax/annual-compliance" className="hover:text-primary">Annual Compliance</Link>
-                      </div>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-
-                  {/* NORMAL LINKS */}
-                  <NavigationMenuItem>
-                    <Link to="/payroll" className="px-4 py-2 font-medium hover:text-primary">
                       Payroll
-                    </Link>
+                    </NavigationMenuTrigger>
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>

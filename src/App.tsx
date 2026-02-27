@@ -24,16 +24,16 @@ import MLMRegistration from "./pages/start-business/MLMRegistration";
 import MSMERegistration from "./pages/start-business/MSMERegistration";
 import MSMERenewal from "./pages/start-business/MSMERenewal";
 import OnePersonCompany from "./pages/start-business/OnePersonCompany";
-// import PartnershipFirm from "./pages/start-business/PartnershipFirm";
-// import PrivateLimited from "./pages/start-business/PrivateLimited";
-// import ProducerCompany from "./pages/start-business/ProducerCompany";
-// import ProjectOfficeRegistration from "./pages/start-business/ProjectOfficeRegistration";
-// import PSARARegistration from "./pages/start-business/PSARARegistration";
-// import PublicLimitedCompany from "./pages/start-business/PublicLimitedCompany";
-// import Section8Company from "./pages/start-business/Section8Company";
-// import SocietyRegistration from "./pages/start-business/SocietyRegistration";
-// import SoleProprietorship from "./pages/start-business/SoleProprietorship";
-// import TrustRegistration from "./pages/start-business/TrustRegistration";
+import PartnershipFirm from "./pages/start-business/PartnershipFirm";
+import PrivateLimited from "./pages/start-business/PrivateLimited";
+import ProducerCompany from "./pages/start-business/ProducerCompany";
+import ProjectOfficeRegistration from "./pages/start-business/ProjectOfficeRegistration";
+import PSARARegistration from "./pages/start-business/PSARARegistration";
+import PublicLimitedCompany from "./pages/start-business/PublicLimitedCompany";
+import Section8Company from "./pages/start-business/Section8Company";
+import SocietyRegistration from "./pages/start-business/SocietyRegistration";
+import SoleProprietorship from "./pages/start-business/SoleProprietorship";
+import TrustRegistration from "./pages/start-business/TrustRegistration";
 
 // Tax Calculators
 import IncomeTaxCalculator from "./pages/tax-calculators/IncomeTaxCalculator";
@@ -61,7 +61,7 @@ const App = () => (
           <Route path="/payroll" element={<Payroll />} />
 
           {/* Start Business Routes */}
-          <Route path="/start-business/company-registration-foriegners" element={<CompanyRegistrationForeigners />} />
+          <Route path="/start-business/company-registration-foreigners" element={<CompanyRegistrationForeigners />} />
           <Route path="/start-business/branch-office-registration" element={<BranchOfficeRegistration />} />
           <Route path="/start-business/iec-renewal" element={<IECRenewal />} />
           <Route path="/start-business/india-subsidiary" element={<IndiaSubsidiary />} />
@@ -70,17 +70,17 @@ const App = () => (
           <Route path="/start-business/mlm-registration" element={<MLMRegistration />} />
           <Route path="/start-business/msme-registration" element={<MSMERegistration />} />
           <Route path="/start-business/msme-renewal" element={<MSMERenewal />} />
-          <Route path="/start-business/one-person-company" element={<OnePersonCompany />} />
-          {/* <Route path="/start-business/partnership-firm" element={<PartnershipFirm />} />
-          <Route path="/start-business/private-limited" element={<PrivateLimited />} />
+          <Route path="/start-business/opc-registration" element={<OnePersonCompany />} />
+          <Route path="/start-business/partnership-firm" element={<PartnershipFirm />} />
+          <Route path="/start-business/private-limited-company" element={<PrivateLimited />} />
           <Route path="/start-business/producer-company" element={<ProducerCompany />} />
           <Route path="/start-business/project-office-registration" element={<ProjectOfficeRegistration />} />
-          <Route path="/start-business/psara-registration" element={<PSARARegistration />} />
-          <Route path="/start-business/public-limited-company" element={<PublicLimitedCompany />} />
-          <Route path="/start-business/section-8-company" element={<Section8Company />} />
-          <Route path="/start-business/society-registration" element={<SocietyRegistration />} />
-          <Route path="/start-business/sole-proprietorship" element={<SoleProprietorship />} />
-          <Route path="/start-business/trust-registration" element={<TrustRegistration />} /> */}
+         <Route path="/start-business/pasara-registration" element={<PSARARegistration />} />
+         <Route path="/start-business/public-limited-company" element={<PublicLimitedCompany />} />
+         <Route path="/start-business/section-8-company" element={<Section8Company />} />
+         <Route path="/start-business/society-registration" element={<SocietyRegistration />} />
+         <Route path="/start-business/sole-proprietorship" element={<SoleProprietorship />} />
+         <Route path="/start-business/trust-registration" element={<TrustRegistration />} />
           {/* Tax Calculators */}
           <Route path="/tax-tools/income-tax-calculator" element={<IncomeTaxCalculator />} />
           <Route path="/tax-tools/gst-calculator" element={<GSTCalculator />} />
