@@ -40,7 +40,29 @@ import IncomeTaxCalculator from "./pages/tax-calculators/IncomeTaxCalculator";
 import GSTCalculator from "./pages/tax-calculators/GSTCalculator";
 import HRACalculator from "./pages/tax-calculators/HRACalculator";
 import CorporateTaxCalculator from "./pages/tax-calculators/CorporateTaxCalculator";
-
+// 2nd Header
+import TDSReturnFiling from "./pages/tax-compliance/TDSReturnFiling";
+import GSTFiling from "./pages/tax-compliance/GSTFiling";
+import GSTCancellation from "./pages/tax-compliance/GSTCancellation";
+import HSNCodeFinder from "./pages/tax-compliance/HSNCodeFinder";
+import IndirectTax from "./pages/tax-compliance/IndirectTax";
+import AccountingBookKeeping from "./pages/tax-compliance/AccountingBookKeeping";
+import IncomeTaxAssessment from "./pages/tax-compliance/IncomeTaxAssessment";
+import VirtualCFO from "./pages/tax-compliance/VirtualCFO";
+import CorporateTax from "./pages/tax-compliance/CorporateTax";
+import ITRForLLP from "./pages/tax-compliance/ITRForLLP";
+import LLPAgreementChange from "./pages/tax-compliance/LLPAgreementChange";
+import AddDesignatedPartner from "./pages/tax-compliance/AddDesignatedPartner";
+import CloseLLP from "./pages/tax-compliance/CloseLLP";
+import LLPAnnualFiling from "./pages/tax-compliance/LLPAnnualFiling";
+// ===== Remaining Tax & Compliance Imports =====
+import SecretarialAudit from "./pages/tax-compliance/SecretarialAudit";
+import AnnualCompliance from "./pages/tax-compliance/AnnualCompliance";
+import PFRegistration from "./pages/tax-compliance/PFRegistration";
+import ESICRegistration from "./pages/tax-compliance/ESICRegistration";
+import ProfessionalTaxRegistration from "./pages/tax-compliance/ProfessionalTaxRegistration";
+// ===== Specific Pages =====
+import ProfessionalTax from "./pages/tax-compliance/ProfessionalTax";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -86,8 +108,41 @@ const App = () => (
           <Route path="/tax-tools/gst-calculator" element={<GSTCalculator />} />
           <Route path="/tax-tools/hra-calculator" element={<HRACalculator />} />
           <Route path="/tax-tools/corporate-tax-calculator" element={<CorporateTaxCalculator />} />
+          {/* tax-compliance */}
+          <Route path="/tax-compliance/tds-return-filing" element={<TDSReturnFiling />} />
+          <Route path="/tax-compliance/gst-filing" element={<GSTFiling />} />
+          <Route path="/tax-compliance/gst-cancellation" element={<GSTCancellation />} />
+          <Route path="/tax-compliance/hsn-code-finder" element={<HSNCodeFinder />} />
+          <Route path="/tax-compliance/indirect-tax" element={<IndirectTax />} />
+          <Route path="/tax-compliance/accounting-book-keeping" element={<AccountingBookKeeping />} />
+          <Route path="/tax-compliance/income-tax-assessment" element={<IncomeTaxAssessment />} />
+          <Route path="/tax-compliance/virtual-cfo" element={<VirtualCFO />} />
+          <Route path="/tax-compliance/corporate-tax" element={<CorporateTax />} />
+          <Route path="/tax-compliance/itr-for-llp" element={<ITRForLLP />} />
+          <Route path="/tax-compliance/llp-agreement-change" element={<LLPAgreementChange />} />
+          <Route path="/tax-compliance/add-designated-partner" element={<AddDesignatedPartner />} />
+          <Route path="/tax-compliance/close-llp" element={<CloseLLP />} />
+          <Route path="/tax-compliance/llp-annual-filing" element={<LLPAnnualFiling />} />
+           {/* ===== Remaining Tax & Compliance Routes ===== */}
 
-          {/* 404 */}
+          <Route path="/tax-compliance/llp-annual-filing" element={<LLPAnnualFiling />} />
+          <Route path="/tax-compliance/secretarial-audit" element={<SecretarialAudit />} />
+          <Route path="/tax-compliance/annual-compliance" element={<AnnualCompliance />} />
+
+          <Route path="/tax-compliance/pf-registration" element={<PFRegistration />} />
+          <Route path="/tax-compliance/esic-registration" element={<ESICRegistration />} />
+          <Route path="/tax-compliance/professional-tax-registration" element={<ProfessionalTaxRegistration />} />
+
+          <Route path="/tax-compliance/llp-agreement-change" element={<LLPAgreementChange />} />
+          <Route path="/tax-compliance/add-designated-partner" element={<AddDesignatedPartner />} />
+          {/* ===== Specific Routes ===== */}
+
+          <Route path="/tax-compliance/professional-tax" element={<ProfessionalTax />} />
+
+
+          {/* ============================= */}
+        
+          {/* ============================= */}
           <Route path="*" element={<NotFound />} />
 
         </Routes>

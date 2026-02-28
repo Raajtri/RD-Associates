@@ -34,7 +34,6 @@ const HeroSection = () => {
 
             <p className="text-lg text-white/80 mb-8 max-w-xl leading-relaxed">
               Launch your private limited company effortlessly with our end-to-end registration services. Expert guidance at every step.
-              Trusted by more than 300+ companies worldwide.
 
             </p>
 

@@ -132,6 +132,8 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-background/60 text-sm text-center md:text-left">
               © {currentYear} RD & Associates Global Compliance & Consulting Private Limited. All rights reserved.
+              
+                      Created By - Sushant Tiwari,Aman Tripathi
             </p>
             <div className="flex gap-6 text-sm">
               <Link to="/privacy" className="text-background/60 hover:text-primary transition-colors">
