@@ -194,9 +194,10 @@ const Header = () => {
 
                   {/* Payroll */}
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="font-medium">
-                      Payroll
-                    </NavigationMenuTrigger>
+                    <Link to="/payroll" className="font-medium px-4 py-2 inline-block">
+                     Payroll
+
+                    </Link>
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
