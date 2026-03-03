@@ -63,6 +63,12 @@ import ESICRegistration from "./pages/tax-compliance/ESICRegistration";
 import ProfessionalTaxRegistration from "./pages/tax-compliance/ProfessionalTaxRegistration";
 // ===== Specific Pages =====
 import ProfessionalTax from "./pages/tax-compliance/ProfessionalTax";
+import GSTRegistrationPage from "./pages/tax-compliance/GST-Registration";
+import ShopsLicense from "./pages/tax-compliance/ShopsLicense";
+import TrademarkRegistration from "./pages/trademark-ip/TrademarkRegistration";
+import TrademarkObjection from "./pages/trademark-ip/TrademarkObjection";
+import TrademarkRenewal from "./pages/trademark-ip/TrademarkRenewal";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -138,6 +144,11 @@ const App = () => (
           {/* ===== Specific Routes ===== */}
 
           <Route path="/tax-compliance/professional-tax" element={<ProfessionalTax />} />
+          <Route path="/tax-compliance/gst-registration" element={<GSTRegistrationPage />} />
+          <Route path="/tax-compliance/shops-license" element={<ShopsLicense />} />
+          <Route path="/trademark/trademark-registration" element={<TrademarkRegistration />} />
+          <Route path="/trademark/trademark-objection" element={<TrademarkObjection />} />
+          <Route path="/trademark/trademark-renewal" element={<TrademarkRenewal />} />
 
 
           {/* ============================= */}
