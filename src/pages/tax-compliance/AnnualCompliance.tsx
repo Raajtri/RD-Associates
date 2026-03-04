@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { submitToFormspree } from "@/utils/formspree";
 
 export default function AnnualCompliance() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -35,11 +36,7 @@ export default function AnnualCompliance() {
             <h3 className="text-2xl font-semibold mb-6">
               Get Annual Compliance Support
             </h3>
-            <form
-              action="https://formspree.io/f/yourformid"
-              method="POST"
-              className="space-y-4"
-            >
+            <form className="space-y-4" onSubmit={submitToFormspree}>
               <input type="text" name="companyname" placeholder="Company Name" required className="w-full p-3 rounded-lg text-black" />
               <input type="email" name="email" placeholder="Email Address" required className="w-full p-3 rounded-lg text-black" />
               <input type="tel" name="phone" placeholder="Contact Number" required className="w-full p-3 rounded-lg text-black" />

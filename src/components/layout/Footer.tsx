@@ -136,12 +136,12 @@ const Footer = () => {
                       Created By - Sushant Tiwari,Aman Tripathi
             </p>
             <div className="flex gap-6 text-sm">
-              <Link to="/privacy" className="text-background/60 hover:text-primary transition-colors">
+              {/* <Link to="/privacy" className="text-background/60 hover:text-primary transition-colors">
                 Privacy Policy
               </Link>
               <Link to="/terms" className="text-background/60 hover:text-primary transition-colors">
                 Terms of Service
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

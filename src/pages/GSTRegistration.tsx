@@ -2,6 +2,7 @@ import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, ArrowRight, IndianRupee } from "lucide-react";
+import { submitToFormspree } from "@/utils/formspree";
 
 const GSTRegistration = () => {
   const benefits = [
@@ -182,13 +183,15 @@ const GSTRegistration = () => {
                 <p className="mb-6 opacity-90">
                   Speak with our GST experts to understand your registration requirements.
                 </p>
-                <form className="space-y-4">
+                <form onSubmit={submitToFormspree} className="space-y-4">
                   <input
+                    name="name"
                     type="text"
                     placeholder="Your Name"
                     className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 placeholder:text-white/60 focus:ring-2 focus:ring-white focus:border-transparent"
                   />
                   <input
+                    name="phone"
                     type="tel"
                     placeholder="Phone Number"
                     className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 placeholder:text-white/60 focus:ring-2 focus:ring-white focus:border-transparent"

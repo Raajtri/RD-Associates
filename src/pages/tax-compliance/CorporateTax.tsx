@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { submitToFormspree } from "@/utils/formspree";
 
 export default function CorporateTax() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -42,9 +43,7 @@ export default function CorporateTax() {
             </h3>
 
             <form
-              action="https://formspree.io/f/yourformid"
-              method="POST"
-              className="space-y-4"
+            onSubmit={submitToFormspree} className="space-y-4"
             >
               <input type="text" name="name" placeholder="Company Name" required className="w-full p-3 rounded-lg text-black" />
               <input type="email" name="email" placeholder="Email Address" required className="w-full p-3 rounded-lg text-black" />

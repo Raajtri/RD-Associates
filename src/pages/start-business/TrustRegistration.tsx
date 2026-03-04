@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { submitToFormspree } from "@/utils/formspree";
 
 export default function TrustRegistration() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -37,8 +38,8 @@ export default function TrustRegistration() {
             </h3>
 
             <form
-              action="https://formspree.io/f/yourformid"
-              method="POST"
+                           onSubmit={submitToFormspree}
+
               className="space-y-4"
             >
               <input

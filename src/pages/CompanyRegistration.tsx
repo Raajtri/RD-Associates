@@ -2,6 +2,7 @@ import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, ArrowRight, FileText, Shield, Clock, IndianRupee } from "lucide-react";
+import { submitToFormspree } from "@/utils/formspree";
 
 const CompanyRegistration = () => {
   const benefits = [
@@ -108,18 +109,21 @@ const CompanyRegistration = () => {
 
             <div className="bg-card rounded-2xl p-8 shadow-card">
               <h3 className="text-2xl font-bold mb-6 font-heading">Quick Enquiry</h3>
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={submitToFormspree}>
                 <input
+                  name="name"
                   type="text"
                   placeholder="Your Name"
                   className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent"
                 />
                 <input
+                  name="phone"
                   type="tel"
                   placeholder="Phone Number"
                   className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent"
                 />
                 <input
+                  name="email"
                   type="email"
                   placeholder="Email Address"
                   className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent"

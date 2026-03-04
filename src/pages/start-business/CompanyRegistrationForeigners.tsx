@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { submitToFormspree } from "@/utils/formspree";
 
 export default function CompanyRegistrationForeigners() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -42,8 +43,7 @@ export default function CompanyRegistrationForeigners() {
             </h3>
 
             <form
-              action="https://formspree.io/f/yourformid"
-              method="POST"
+              onSubmit={submitToFormspree}
               className="space-y-4"
             >
               <input type="text" name="name" placeholder="Your Name" required className="w-full p-3 rounded-lg text-black" />

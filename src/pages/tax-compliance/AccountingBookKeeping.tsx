@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { submitToFormspree } from "@/utils/formspree";
 
 export default function AccountingBookKeeping() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -41,11 +42,7 @@ export default function AccountingBookKeeping() {
               Get Accounting Support
             </h3>
 
-            <form
-              action="https://formspree.io/f/yourformid"
-              method="POST"
-              className="space-y-4"
-            >
+            <form className="space-y-4" onSubmit={submitToFormspree}>
               <input type="text" name="name" placeholder="Your Name" required className="w-full p-3 rounded-lg text-black" />
               <input type="email" name="email" placeholder="Your Email" required className="w-full p-3 rounded-lg text-black" />
               <input type="tel" name="phone" placeholder="Phone Number" required className="w-full p-3 rounded-lg text-black" />

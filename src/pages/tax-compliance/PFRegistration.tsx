@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { submitToFormspree } from "@/utils/formspree";
 
 export default function PFRegistration() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -33,7 +34,7 @@ export default function PFRegistration() {
 
           <div className="bg-primary text-primary-foreground p-8 rounded-xl">
             <h3 className="text-xl font-semibold mb-4">Apply for PF Registration</h3>
-            <form action="https://formspree.io/f/yourformid" method="POST" className="space-y-4">
+            <form onSubmit={submitToFormspree} className="space-y-4">
               <input type="text" name="company" placeholder="Company Name" required className="w-full p-3 rounded text-black" />
               <input type="email" name="email" placeholder="Email" required className="w-full p-3 rounded text-black" />
               <button className="w-full bg-background text-primary py-3 rounded font-semibold">
