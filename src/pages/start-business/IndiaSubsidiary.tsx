@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-
+// import { submitToFormspree } from "@/utils/formspree";
 export default function IndiaSubsidiary() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
