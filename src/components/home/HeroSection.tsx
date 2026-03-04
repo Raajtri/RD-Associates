@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import { submitToFormspree } from "@/utils/formspree";
 
 const HeroSection = () => {
   const trustedLogos = [
@@ -80,10 +81,12 @@ const HeroSection = () => {
               Get personalized guidance from seasoned tax professionals. Whether it's GST, income tax, or corporate filings, we've got you covered!
             </p>
 
-            <form className="space-y-4">
+            <form className="space-y-4"              onSubmit={submitToFormspree}
+>
               <div>
                 <label className="block text-sm font-medium text-foreground mb-1">Full Name</label>
                 <input
+                  name="name"
                   type="text"
                   placeholder="Enter your name"
                   className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
@@ -93,6 +96,7 @@ const HeroSection = () => {
               <div>
                 <label className="block text-sm font-medium text-foreground mb-1">Phone Number</label>
                 <input
+                  name="phone"
                   type="tel"
                   placeholder="+91 XXXXX XXXXX"
                   className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
@@ -102,6 +106,7 @@ const HeroSection = () => {
               <div>
                 <label className="block text-sm font-medium text-foreground mb-1">Email Address</label>
                 <input
+                  name="email"
                   type="email"
                   placeholder="your@email.com"
                   className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
