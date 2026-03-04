@@ -46,7 +46,7 @@ const ChatBot = () => {
   const [matchedService, setMatchedService] = useState<ServiceType | null>(null);
   const [isTyping, setIsTyping] = useState(false);
 
-  const whatsappNumber = "8303026772"; // 🔴 CHANGE
+  const whatsappNumber = "9869966163"; // 🔴 CHANGE
 
   const findService = (input: string) => {
     const lower = input.toLowerCase();
