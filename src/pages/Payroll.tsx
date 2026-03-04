@@ -2,6 +2,9 @@ import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, ArrowRight, Users, Calculator, Clock, Shield } from "lucide-react";
+import { submitToFormspree } from "@/utils/formspree";
+
+
 
 const Payroll = () => {
   const features = [
@@ -39,7 +42,7 @@ const Payroll = () => {
     "Leave Management",
     "Attendance Management",
   ];
-
+  
   return (
     <Layout>
       {/* Page Banner */}
@@ -114,28 +117,32 @@ const Payroll = () => {
 
             <div className="bg-card rounded-2xl p-8 shadow-card">
               <h3 className="text-2xl font-bold mb-6 font-heading">Request a Quote</h3>
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={submitToFormspree}>
                 <input
                   type="text"
-                  placeholder="Company Name"
+                  placeholder="Rd associate"
                   className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent"
                 />
                 <input
+                  name="name"
                   type="text"
                   placeholder="Your Name"
                   className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent"
                 />
                 <input
+                  name="phone"
                   type="tel"
                   placeholder="Phone Number"
                   className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent"
                 />
                 <input
+                  name="email"
                   type="email"
                   placeholder="Email Address"
                   className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent"
                 />
                 <input
+
                   type="number"
                   placeholder="Number of Employees"
                   className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent"
@@ -151,5 +158,6 @@ const Payroll = () => {
     </Layout>
   );
 };
+
 
 export default Payroll;

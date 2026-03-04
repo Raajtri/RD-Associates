@@ -68,6 +68,7 @@ import ShopsLicense from "./pages/tax-compliance/ShopsLicense";
 import TrademarkRegistration from "./pages/trademark-ip/TrademarkRegistration";
 import TrademarkObjection from "./pages/trademark-ip/TrademarkObjection";
 import TrademarkRenewal from "./pages/trademark-ip/TrademarkRenewal";
+import ChatBot from "./components/ChatBot";
 
 const queryClient = new QueryClient();
 
@@ -157,6 +158,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
 
         </Routes>
+        <ChatBot />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
